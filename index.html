@@ -4,21 +4,62 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <style media="screen">
+      .grid {
+        display: flex;
+        flex-direction: column;
+        }
+        @media (max-width:600px) {
+          body {
+            background: red;
+          }
+          #header {
+            background: green;
+          }
+        }
+        @media (max-width: 650px) {
+          .logo {
+            margin-top: 15px;
+            width: 100%;
+            position: relative;
+          }
+        }
+
+
+        @media (max-width: 650px) {
+          .logo > img {
+            margin: 0 auto;
+          }
+        }
+    </style>
     <title>Landing page</title>
   </head>
-  <body>
+  <body class="grid">
     <header id="header">
-      <img src="" alt="" id="header-img">
-      <nav id="nav-bar">
+      <img src="https://picsum.photos/30/20" alt="logo" id="header-img">
+      <nav id="nav-bar" >
         <ul>
-          <li><a href="" class="nav-link">link</a></li>
-          <li><a href="" class="nav-link">link</a></li>
-          <li><a href="" class="nav-link">link</a></li>
+          <li><a href="#section-1" class="nav-link">link</a></li>
+          <li><a href="#section-2" class="nav-link">link</a></li>
+          <li><a href="#section-3" class="nav-link">link</a></li>
         </ul>
       </nav>
     </header>
     <main>
+      <section>
+        <iframe width="849" height="480" src="https://www.youtube.com/embed/1amrIj2rlYc?list=PLK1ohDSU3WcmCX4ccLq_MHoA_TgfoSnpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+      </section>
+      <section id="section-1"></section>
+      <section id="section-2"></section>
+      <section id="section-3"></section>
+      <section>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <input type="email" name="email" value="" id="email" placeholder="pepe@mail.com" required>
 
+          <input type="submit" name="" value="submit" id="submit">
+        </form>
+      </section>
     </main>
   </body>
 </html>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

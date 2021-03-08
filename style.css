@@ -23,3 +23,29 @@ body {
   flex-direction: column;
   /* background: lightblue; */
 }
+#header {
+  display: inline-flex;
+  flex-direction: column;
+}
+@media (max-width:600px) {
+  body {
+    background: red;
+  }
+  #header {
+    background: green;
+  }
+}
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    width: 100%;
+    position: relative;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .logo > img {
+    margin: 0 auto;
+  }
+}

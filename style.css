@@ -1,3 +1,11 @@
+/* colours */
+:root {
+  --c1: red;
+  --c2: blue;
+  --c3: green;
+  --c4: pink;
+  --c5: orangered;
+}
 /* reset */
 *,
 *::after,
@@ -21,31 +29,218 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  /* background: lightblue; */
+  background: lightblue;
 }
-#header {
-  display: inline-flex;
+section {
+  height: 100vh;
+  color: black;
+  font-size: 100px;
+  text-align: center;
+
+}
+
+/* navigation bar */
+/*-------------- overlay -------------*/
+.overlay {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* initially is 'hidden' */
+  transform: translateX(-100vw);
+}
+
+/* togle 'visible' when menu clicked */
+.overlay-slide-right {
+  /* transition: all 0.4s ease-in-out; */
+  transform: translateX(0);
+}
+
+.overlay-slide-left {
+  /* transition: all 0.8s ease-in-out; */
+  transform: translateX(-100%);
+}
+/*-------------- nav menu items -------*/
+nav,
+nav ul {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+nav ul {
+  display: flex;
   flex-direction: column;
+  justify-content: stretch;
+  list-style: none;
 }
-@media (max-width:600px) {
+
+nav ul li {
+  height: 20%; /* 20% of the parent,ul, which is 100vh*/
+  overflow: hidden;
+}
+
+nav li a {
+  font-family: sans-serif;
+  position: relative;
+  top: 45%;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 4px;
+  display: block;
+  text-align: center;
+  transition: none;
+}
+
+nav li a:hover {
+  transform: scale(1.2);
+}
+/* add contente before the link */
+nav li a::before {
+  content: "";
+}
+
+nav li a:hover::before {
+  opacity: 1;
+}
+
+/* nav li:nth-of-type(1) { background-color: var(--c1);}
+nav li:nth-of-type(2) { background-color: var(--c2);}
+nav li:nth-of-type(3) { background-color: var(--c3);}
+nav li:nth-of-type(4) { background-color: var(--c4);}
+nav li:nth-of-type(5) { background-color: var(--c5);} */
+
+/* slide in animatio with delay for each nav item  */
+
+/*------------- menu bars */
+.menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 2rem;
+  z-index: 20;
+  display: inline;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 2px;
+  background: #fff;
+  margin: 8px 0;
+  transition: 0.4s;
+}
+/* rotate firs bar */
+.change .bar1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+/* fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+
+
+/* media queries */
+
+@media (min-width:600px) {
   body {
     background: red;
   }
   #header {
     background: green;
   }
-}
-@media (max-width: 650px) {
-  .logo {
-    margin-top: 15px;
-    width: 100%;
-    position: relative;
+  .menu-bars {
+    display: none;
   }
-}
 
-
-@media (max-width: 650px) {
-  .logo > img {
-    margin: 0 auto;
+  .slide-out-1,
+  .slide-out-2,
+  .slide-out-3,
+  .slide-out-4,
+  .slide-out-5
+   {
+    animation: none;
   }
+  .overlay {
+    position: absolute;
+    top: 0;
+    height: 0px;
+    transform: translateX(0);
+    background: transparent;
+  }
+
+  /* togle 'visible' when menu clicked */
+  .overlay-slide-right {
+    transition: none;
+    transform: none;
+  }
+
+  .overlay-slide-left {
+    transition: none;
+    transform: none;
+  }
+  nav {
+    /* position: absolute !important; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: black;
+    z-index: 10;
+    height: 60px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    align-items: stretch;
+  }
+  nav ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    /* background: blue; */
+    margin-right: 5rem;
+  }
+
+  nav ul li {
+    overflow: hidden;
+    margin-right: 1rem;
+    display: inline-block;
+    height: 60px;
+    /* background: green; */
+
+  }
+
+  nav li a {
+    text-transform: capitalize;
+    position: static;
+    height: 100%;
+    padding-top: 1rem;
+    margin-top: 1rem;
+  }
+
+  nav li a:hover {
+    transform: none;
+    background: yellow;
+  }
+  /* add contente before the link */
+  nav li a::before {
+    content: "";
+
+  }
+
+  nav li a:hover::before {
+    display: none;
+  }
+
 }

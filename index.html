@@ -4,54 +4,42 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
-    <style media="screen">
-      .grid {
-        display: flex;
-        flex-direction: column;
-        }
-        @media (max-width:600px) {
-          body {
-            background: red;
-          }
-          #header {
-            background: green;
-          }
-        }
-        @media (max-width: 650px) {
-          .logo {
-            margin-top: 15px;
-            width: 100%;
-            position: relative;
-          }
-        }
-
-
-        @media (max-width: 650px) {
-          .logo > img {
-            margin: 0 auto;
-          }
-        }
-    </style>
     <title>Landing page</title>
   </head>
   <body class="grid">
+
+    <!-- menu bars -->
+    <div class="menu-bars" id="menu-bars">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
     <header id="header">
       <img src="https://picsum.photos/30/20" alt="logo" id="header-img">
-      <nav id="nav-bar" >
-        <ul>
-          <li><a href="#section-1" class="nav-link">link</a></li>
-          <li><a href="#section-2" class="nav-link">link</a></li>
-          <li><a href="#section-3" class="nav-link">link</a></li>
-        </ul>
+      <!-- menu overlay -->
+      <div class="overlay overlay-slide-left" id="overlay">
+        <!-- menu items -->
+        <nav id="nav-bar">
+          <ul id="navbar-list">
+            <li id="nav-1" class=" nav-link slide-out-1"><a href="#home">home</a></li>
+            <li id="nav-2" class=" nav-link slide-out-2"><a href="#about">about</a></li>
+            <li id="nav-3" class=" nav-link slide-out-3"><a href="#products">products</a></li>
+            <li id="nav-4" class=" nav-link slide-out-4"><a href="#contact">contact</a></li>
+            <li id="nav-5" class=" nav-link slide-out-5"><a href="#testimonial">testimonial</a></li>
+          </ul>
+        </nav>
+      </div>
       </nav>
     </header>
     <main>
       <section>
         <iframe width="849" height="480" src="https://www.youtube.com/embed/1amrIj2rlYc?list=PLK1ohDSU3WcmCX4ccLq_MHoA_TgfoSnpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
       </section>
-      <section id="section-1"></section>
-      <section id="section-2"></section>
-      <section id="section-3"></section>
+      <section id="home">1</section>
+      <section id="about">2</section>
+      <section id="products">3</section>
+      <section id="contact">4</section>
+      <section id="testimonial">5</section>
       <section>
         <form action="https://www.freecodecamp.com/email-submit" id="form">
           <input type="email" name="email" value="" id="email" placeholder="pepe@mail.com" required>
@@ -60,6 +48,10 @@
         </form>
       </section>
     </main>
+
+    <script type="text/javascript" src="index.js">
+
+    </script>
   </body>
 </html>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

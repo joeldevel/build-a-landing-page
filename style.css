@@ -372,7 +372,6 @@ section {
   /* add contente before the link */
   #header nav li a::before {
     content: "";
-
   }
 
   #header nav li a:hover::before {

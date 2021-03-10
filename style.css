@@ -12,8 +12,20 @@
 *::before {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
+.btn {
+  display: inline-block;
+  padding: 1rem 1rem;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  border-radius: 2px;
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
 html {
   font-size: 62.5%;
 }
@@ -34,7 +46,7 @@ body {
 section {
   min-height: 100vh;
   color: black;
-  /* font-size: 100px; */
+  padding-top: 60px;
   text-align: center;
 }
 
@@ -47,6 +59,7 @@ section {
   border-radius: 500px;
 }
 /* navigation bar */
+
 /*-------------- overlay -------------*/
 .overlay {
   position: fixed;
@@ -71,25 +84,25 @@ section {
   transform: translateX(-100%);
 }
 /*-------------- nav menu items -------*/
-nav,
-nav ul {
+#header nav,
+#header nav ul {
   height: 100vh;
   padding: 0;
   margin: 0;
 }
-nav ul {
+#header nav ul {
   display: flex;
   flex-direction: column;
   justify-content: stretch;
   list-style: none;
 }
 
-nav ul li {
+#header nav ul li {
   height: 20%; /* 20% of the parent,ul, which is 100vh*/
   overflow: hidden;
 }
 
-nav li a {
+#header nav li a {
   font-family: sans-serif;
   position: relative;
   top: 45%;
@@ -102,15 +115,15 @@ nav li a {
   transition: none;
 }
 
-nav li a:hover {
+#header nav li a:hover {
   transform: scale(1.2);
 }
 /* add contente before the link */
-nav li a::before {
+#header nav li a::before {
   content: "";
 }
 
-nav li a:hover::before {
+#header nav li a:hover::before {
   opacity: 1;
 }
 
@@ -118,7 +131,25 @@ nav li a:hover::before {
 #about { background-color: var(--c2);}
 #products { background-color: var(--c3);}
 #contact { background-color: var(--c4);}
-#testimonial { background-color: var(--c5);}
+#reviews { background-color: var(--c5);}
+
+/* ******************************************************
+                      hero
+********************************************************** */
+#hero {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+#hero h1 {
+  font-size: 6rem;
+  line-height: normal;
+}
+#hero span {
+  display: inline-block;
+  font-size: 2rem;
+}
 
 
 /* ******************************************************
@@ -130,14 +161,14 @@ nav li a:hover::before {
 }
 
 /* ******************************************************
-                testimonial
+                reviews
 ********************************************************** */
-#testimonial {
+#reviews {
   display: flex;
   flex-direction: column;
 }
 
-.testimony {
+.review {
     min-height: 200px;
     background: grey;
     margin: 1rem;
@@ -162,6 +193,35 @@ nav li a:hover::before {
   background: orangered;
   display: flex;
   flex-direction: column;
+}
+.logo {
+  border-radius: 100px;
+  margin: 1rem;
+  height: 30px;
+}
+.footer-navs-container {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  align-items: center;
+}
+.footer-content {
+  display: flex;
+}
+.footer-nav {
+  padding: 1rem;
+}
+.footer-nav__list {
+  list-style: none;
+}
+.footer-nav__heading {
+  color:black;
+  font-size: 1.5rem;
+}
+.footer-nav-link {
+  text-decoration: none;
+  color: black;
 }
 .copyright-container {
   text-align: center;
@@ -231,6 +291,9 @@ nav li a:hover::before {
     z-index: 10;
     height: 60px;
   }
+  /* #logo-link {
+    cursor: pointer
+  } */
   .menu-bars {
     display: none;
   }
@@ -261,13 +324,13 @@ nav li a:hover::before {
     transition: none;
     transform: none;
   }
-  nav {
+  #header nav {
     /* position: absolute !important; */
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
   }
-  nav ul {
+  #header nav ul {
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -276,7 +339,7 @@ nav li a:hover::before {
     margin-right: 5rem;
   }
 
-  nav ul li {
+  #header nav ul li {
     overflow: hidden;
     margin-right: 1rem;
     display: inline-block;
@@ -285,7 +348,7 @@ nav li a:hover::before {
 
   }
 
-  nav li a {
+  #header nav li a {
     text-transform: capitalize;
     position: static;
     height: 100%;
@@ -293,12 +356,12 @@ nav li a:hover::before {
     margin-top: 1rem;
   }
 
-  nav li a:hover {
+  #header nav li a:hover {
     transform: none;
     background: yellow;
   }
   /* add contente before the link */
-  nav li a::before {
+  #header nav li a::before {
     content: "";
 
   }
@@ -308,15 +371,22 @@ nav li a:hover::before {
   }
 
   /* ******************************************************
-                  testimonial
+                  reviews
   ********************************************************** */
-  #testimonial {
+  #reviews {
     /* flex-direction: row; */
   }
 
-  .testimony {
+  .review {
 
   }
 
+  /* ******************************************************
+                  footer
+  ********************************************************** */
+  .footer-navs-container {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
 }

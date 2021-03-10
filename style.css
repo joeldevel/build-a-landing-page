@@ -26,8 +26,10 @@
   margin: 1rem;
   margin-bottom: 2rem;
 }
+
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -275,6 +277,12 @@ section {
  ***********************************************************/
 
 @media (min-width:600px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .btn:hover {
+    cursor: pointer !important;
+  }
   body {
     background: red;
   }
@@ -329,6 +337,7 @@ section {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
+    height: 100%;
   }
   #header nav ul {
     height: 100%;
@@ -366,7 +375,7 @@ section {
 
   }
 
-  nav li a:hover::before {
+  #header nav li a:hover::before {
     display: none;
   }
 

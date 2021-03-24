@@ -316,6 +316,7 @@ section {
                 footer
 ********************************************************** */
 #footer {
+  padding-top: 2rem;
   background: var(--gradient-2);
   display: flex;
   flex-direction: column;
@@ -329,11 +330,15 @@ section {
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .footer-content {
   display: flex;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 .footer-nav {
   padding: 1rem;
@@ -342,17 +347,19 @@ section {
   list-style: none;
 }
 .footer-nav__heading {
-  color:black;
+  color: #eaeaea;
   font-size: 1.5rem;
 }
 .footer-nav-link {
   text-decoration: none;
-  color: black;
+  color: #eaeaea;
 }
 .copyright-container {
+  padding-top: 2rem;
   text-align: center;
-  height: 5rem;
+  height: 6rem;
   color: white;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 

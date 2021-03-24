@@ -275,6 +275,43 @@ section {
   display: block;
   width: 100%;
 }
+
+
+/* ******************************************************
+                collaborate
+********************************************************** */
+
+#collaborate {
+  display: flex;
+  flex-direction: column;
+}
+
+.collaborate-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.collaborate-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  width: 90%;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.donate-mediums-list {
+  list-style: none;
+  text-align: left;
+}
+
+.donate-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 /* ******************************************************
                 footer
 ********************************************************** */
@@ -490,6 +527,35 @@ section {
     flex: 1 1 30%;
     max-height: 50vh;
   }
+
+  /* ******************************************************
+                  collaborate
+  ********************************************************** */
+
+  #collaborate {
+    padding: 1rem;
+    max-width: 690px;
+    margin: 0 auto;
+  }
+
+  .collaborate-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .collaborate-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    width: 90%;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    flex: 0 1 48%;
+  }
+
+
 
   /* ******************************************************
                   footer

@@ -5,6 +5,9 @@
   --c3: green;
   --c4: pink;
   --c5: orangered;
+
+  --gradient-1: slategrey;
+  --gradient-2: navy;
 }
 /* reset */
 *,
@@ -60,6 +63,7 @@ section {
   margin: 1rem;
   border-radius: 500px;
 }
+
 /* navigation bar */
 
 /*-------------- overlay -------------*/
@@ -139,7 +143,7 @@ section {
                       hero
 ********************************************************** */
 #hero {
-  background: whitesmoke;
+  background-image: linear-gradient(90deg,var(--gradient-1), var(--gradient-2));
   display: flex;
   flex-direction: column;
   justify-content: space-around;

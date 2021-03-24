@@ -49,7 +49,7 @@
         <p>Unix like OS...</p>
       </section>
       <section id="features">
-        <iframe width="849" height="480" src="https://www.youtube.com/embed/1amrIj2rlYc?list=PLK1ohDSU3WcmCX4ccLq_MHoA_TgfoSnpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+        <iframe width="849" height="480" src="https://www.youtube.com/embed/1amrIj2rlYc?list=PLK1ohDSU3WcmCX4ccLq_MHoA_TgfoSnpQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video" class="video"></iframe>
 
       </section>
       <section id="reviews">
@@ -81,15 +81,30 @@
       </section>
 
       <section id="contact">
-        <h3>Contact us!</h3>
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
-          <input type="email" name="email" value="" id="email" placeholder="pepe@mail.com" required>
-          <input type="submit" name="" value="submit" id="submit">
-        </form>
+        <h2>Contact us!</h2>
+        <div class="form-container">
+          <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <div class="input-group">
+              <label for="name" class="input-label">Your name </label>
+              <input type="email" name="email" value="" id="email" placeholder="pepe@mail.com" required class="input-field">
+            </div>
+            <div class="input-group">
+              <label for="email" class="input-label">Your email </label>
+              <input type="email" class="input-field" required name="email" placeholder=" e.g. p@mail.com">
+            </div>
+            <div class="input-group">
+              <label for="message" class="input-label">Your message</label>
+              <textarea name="message" rows="8" cols="" class="textarea" id="message" required></textarea>
+            </div>
+            <div class="input-container">
+              <input type="submit" name="" value="submit" id="Send" class="btn-submit">
+            </div>
+          </form>
+        </div>
       </section>
 
       <section id="colaborate">
-        <h3>Colaborate</h3>
+        <h2>Colaborate</h2>
       </section>
 
     </main>
